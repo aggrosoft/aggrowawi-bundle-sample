@@ -1,0 +1,27 @@
+<div class="jarviswidget jarviswidget-sortable" id="wid-id-demo-export" data-widget-colorbutton="false" data-widget-editbutton="false" data-widget-custombutton="false" data-widget-deletebutton="false">
+    <header>
+        <span class="widget-icon"> <i class="fa fa-book"></i> </span>
+        <h2>{% trans %}Custom Export{% endtrans %}</h2>
+    </header>
+    <div>
+        <!-- widget edit box -->
+        <div class="jarviswidget-editbox">
+            <!-- This area used as dropdown edit box -->
+        </div>
+
+        <div class="widget-body">
+            <form action="{{ path('demo_export_orders_as_csv') }}" class="form-inline" method="post" target="_blank" style="">
+                <div class="form-group">
+                    <label for="demo-export-from">{% trans %}Date from{% endtrans %}</label>
+                    <input id="demo-export-from" class="datepicker form-control" type="text" name="from" value="">
+                </div>
+                <div class="form-group">
+                    <label for="demo-export-to">{% trans %}to{% endtrans %}</label>
+                    <input id="demo-export-to" class="datepicker form-control" type="text" name="to" value="">
+                </div>
+                <button class="btn btn-success" type="submit">{% trans %}Export{% endtrans %}</button>
+            </form>
+            
+       </div>
+  </div>
+</div>
