@@ -7,7 +7,7 @@ A simple example to create your own extension for AggroWAWI
 2. Copy the contents into your AggroWAWI installation
 3. Register the bundle in the file `app/bundles/bundles.inc.php`
 
-```
+```php
 <?php
 
 function get_bundles()
@@ -22,7 +22,7 @@ function get_bundles()
 
 4. Add routing info if you need to have custom controller routes to `src/Aggrosoft/WAWIBundle/Resources/config/routing_bundles.yml`
 
-```
+```yaml
 #...
 demo:
     resource: "@AggrosoftDemoBundle/Resources/config/routing.yml"
