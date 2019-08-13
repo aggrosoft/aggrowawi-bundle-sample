@@ -1,0 +1,4 @@
+aggrosoft_demobundle:
+    resource: "@AggrosoftDemoBundle/Service/"
+    type:     annotation
+    prefix:   /

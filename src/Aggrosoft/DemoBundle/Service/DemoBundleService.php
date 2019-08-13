@@ -6,13 +6,18 @@
  * route and service names to avoid naming clashes with the autoloader
  */
 
-namespace Aggrosoft\DemoBundleBundle\Service;
+namespace Aggrosoft\DemoBundle\Service;
 
 use JMS\DiExtraBundle\Annotation as DI;
 use JMS\DiExtraBundle\Annotation\Inject;
 use JMS\DiExtraBundle\Annotation\InjectParams;
 use Aggrosoft\WAWIBundle\Service\PluggableService;
 use Symfony\Component\HttpFoundation\Request;
+
+
+// tabsl
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+
 
 // Look at this class to see all events available
 use Aggrosoft\WAWIBundle\Event\WAWIEvents;
@@ -84,7 +89,7 @@ class DemoBundleService extends PluggableService {
         $this->orderService = $orderService;
         $this->customerService = $customerService;
         $this->offerService = $offerService;
-        $this->pluginName = "fachwelt";
+        $this->pluginName = "demo";
         $this->router = $router;
         $this->buzz = $buzz;
         $this->renderer = $renderer;
@@ -214,7 +219,7 @@ class DemoBundleService extends PluggableService {
 
         array_unshift($data, array('No.', 'Name', 'Amount', 'Sales Price', 'Tax', 'Brut. Sum'));
 
-        $filename = "fachweltexport-$fromDate-$toDate";
+        $filename = "demobundle-export-$fromDate-$toDate";
 
         header("Content-type: text/csv");
         header("Content-Disposition: attachment; filename={$filename}.csv");
